@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Corporate Partnership | Leeds Food Aid Network</title>
+  <link rel="stylesheet" href="styles-green5.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">Leeds FAN</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="get-help.html">Get Help</a></li>
+        <li class="dropdown">
+          <a href="get-involved.html" class="active">Get Involved ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="volunteer.html">Volunteer Sign-Up</a></li>
+            <li><a href="partner.html">Corporate Partnerships</a></li>
+          </ul>
+        </li>
+        <li><a href="news-resources.html">News & Resources</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h1>Corporate Partnerships</h1>
+      <p>We're proud to work with companies and organisations committed to ending food poverty in Leeds. 
+      If you're interested in collaborating with us, please fill in the form below.</p>
+
+      <form action="#" method="POST" class="volunteer-form">
+        <div class="form-grid">
+          <div>
+            <label for="company">Company Name:</label>
+            <input type="text" id="company" name="company" required />
+
+            <label for="contact">Contact Person:</label>
+            <input type="text" id="contact" name="contact" required />
+
+            <label for="email">Contact Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="partnership-type">Type of Partnership:</label>
+            <select id="partnership-type" name="partnership-type">
+              <option value="" disabled selected>Select an option</option>
+              <option value="donations">Financial or food donations</option>
+              <option value="volunteering">Employee volunteering</option>
+              <option value="sponsorship">Sponsorship / Co-branding</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="ideas">Do you have a proposal or idea?</label>
+            <textarea id="ideas" name="ideas" rows="5" placeholder="Tell us what you're thinking..."></textarea>
+
+            <label for="message">Additional Comments or Questions:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-button">Submit Partnership Interest</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Leeds Food Aid Network. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#">Accessibility</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Contact</a>
+    </div>
+  </footer>
+</body>
+</html>

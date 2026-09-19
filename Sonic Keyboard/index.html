@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sonic Keyboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+<body>
+  <div id="ui">
+    <header class="topbar">
+      <div class="title">
+        <div class="h1">Sonic Keyboard</div>
+        <div class="sub">Press any key, A to Z or spacebar.</div>
+      </div>
+
+      <div class="stats">
+        <div class="pill">Total: <span id="total">0</span></div>
+        <div class="pill">Fatigue: <span id="fatigue">0.00</span></div>
+        <button id="muteBtn" class="btn">Mute: Off</button>
+        <button id="resetBtn" class="btn ghost">Reset</button>
+      </div>
+    </header>
+
+    <aside class="archive">
+      <div class="archiveHead">
+        <div class="archiveTitle">Archive Wall</div>
+        <div class="archiveHint">Backspace tries to erase—records persist.</div>
+      </div>
+      <div id="archiveList" class="archiveList"></div>
+    </aside>
+  </div>
+
+  <script src="audioEngine.js"></script>
+  <script src="sketch.js"></script>
+</body>
+</html>

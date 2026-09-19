@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forum | CensHERship</title>
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <!-- css -->
+  <link rel="stylesheet" href="forum.css" />
+
+</head>
+
+<body>
+  <div class="survey-modal" id="surveyModal">
+  <div class="survey-modal-box">
+    <button class="survey-modal-close" id="closeSurveyModal" aria-label="Close survey">&times;</button>
+
+    <p class="survey-modal-label">COMMUNITY SURVEY</p>
+    <h2>Before entering the forum</h2>
+    <p class="survey-modal-text">
+      We invite you to complete this short anonymous survey before exploring the community stories.
+    </p>
+
+    <div class="survey-embed-wrap">
+      <iframe
+        src="https://forms.cloud.microsoft/pages/responsepage.aspx?id=qO3qvR3IzkWGPlIypTW3y9xpgVm6DvtDjYwAwK3T0J5UNVFRR1hIT1lLMUk5TVZRN0RJWklGSzJTQS4u&route=shorturl"
+        frameborder="0"
+        marginwidth="0"
+        marginheight="0"
+        style="border: none; width: 100%; height: 520px;"
+        allowfullscreen
+        webkitallowfullscreen
+        mozallowfullscreen
+        msallowfullscreen>
+      </iframe>
+    </div>
+
+    <div class="survey-modal-actions">
+      <a
+        href="https://forms.cloud.microsoft/pages/responsepage.aspx?id=qO3qvR3IzkWGPlIypTW3y9xpgVm6DvtDjYwAwK3T0J5UNVFRR1hIT1lLMUk5TVZRN0RJWklGSzJTQS4u&route=shorturl"
+        target="_blank"
+        class="survey-open-link"
+      >
+        Open survey in new tab
+      </a>
+    </div>
+  </div>
+</div>
+
+  <div class="site-shell">
+
+    <!-- HEADER -->
+    <header class="site-header">
+      <a href="index.html" class="logo">
+      <img src="censhership logo.png" alt="Censhership logo">
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="problem.html">Problem</a>
+        <a href="survey.html">Survey</a>
+        <a href="forum.html" class="active">Forum</a>
+        <a href="about.html">About us</a>
+      </nav>
+
+      <a href="forum.html" class="btn-primary">Take Action</a>
+    </header>
+
+    <main>
+
+      <section class="forum section-card" id="forum">
+  <div class="forum-header">
+    <div class="forum-header-copy">
+      <p class="eyebrow">Community Forum</p>
+      <h2>Censored, but not silent.</h2>
+      <p class="section-intro">
+        A shared space for people to post their experiences, support others,
+        and make hidden stories visible together.
+      </p>
+    </div>
+
+    <div class="forum-meta-box">
+      <p class="forum-meta-number" id="forumStoryCount">128</p>
+      <p class="forum-meta-label">stories shared</p>
+    </div>
+  </div>
+
+  <p class="forum-research-note">
+    Research note: stories shared here can be stored anonymously for future research. We only
+    collect what participants choose to submit.
+  </p>
+
+  <div class="forum-toolbar">
+    <div class="forum-filters">
+      <button class="filter-chip active" data-filter="all" type="button">All</button>
+      <button class="filter-chip" data-filter="instagram" type="button">Instagram</button>
+      <button class="filter-chip" data-filter="tiktok" type="button">TikTok</button>
+      <button class="filter-chip" data-filter="menstruation" type="button">Menstruation</button>
+      <button class="filter-chip" data-filter="abortion" type="button">Abortion</button>
+      <button class="filter-chip" data-filter="menopause" type="button">Menopause</button>
+    </div>
+
+    <div class="forum-controls">
+      <select class="forum-sort">
+        <option value="newest">Newest first</option>
+        <option value="liked">Most liked</option>
+        <option value="discussed">Most discussed</option>
+      </select>
+
+      <button type="button" class="btn forum-share-btn" id="openStoryModal">
+        Share your story
+      </button>
+    </div>
+  </div>
+
+  <section class="forum-story-section forum-story-section-featured" id="featuredStoriesSection">
+    <div class="forum-section-heading">
+      <div>
+        <p class="forum-section-kicker">Featured stories</p>
+        <h3>Curated examples</h3>
+      </div>
+      <p class="forum-section-copy">
+      </p>
+    </div>
+
+  <div class="forum-grid forum-grid-featured">
+
+    <article class="forum-card" data-platform="instagram" data-topic="abortion">
+      <div class="forum-card-head">
+        <div class="forum-user">
+          <div class="forum-avatar">
+           <img src="forum/DSC_5973.jpg" alt="Profile photo of forum user">
+          </div>
+
+          <div class="forum-user-meta">
+            <strong>Anonymous user</strong>
+            <span>2 hours ago</span>
+          </div>
+        </div>
+
+        <div class="forum-card-top">
+          <span class="forum-platform">Instagram</span>
+          <span class="forum-topic">Abortion</span>
+        </div>
+      </div>
+
+      <h3>“My post completely disappeared after I used certain words.”</h3>
+      <p class="forum-excerpt">
+        I posted a resource about reproductive rights and noticed it stopped appearing
+        in hashtags and search. It felt like the platform quietly erased it.
+      </p>
+
+      <div class="forum-actions">
+        <button class="action-btn like-btn">
+          <span class="icon">♡</span>
+          <span class="count">21</span>
+        </button>
+
+        <button class="action-btn comment-btn">
+          <span class="icon">💬</span>
+          <span>Comment</span>
+        </button>
+
+        <button class="action-btn expand-btn">
+          <span class="icon">↕</span>
+          <span>Expand</span>
+        </button>
+      </div>
+
+      <div class="comment-panel">
+        <div class="comment-list">
+          <p><strong>Ana:</strong> I had the same experience with health education posts.</p>
+          <p><strong>Leah:</strong> This is exactly why spaces like this matter.</p>
+        </div>
+
+        <div class="comment-form">
+          <input type="text" placeholder="Write a comment..." />
+          <button class="btn small-btn">Post</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="forum-card" data-platform="tiktok" data-topic="menstruation">
+      <div class="forum-card-head">
+        <div class="forum-user">
+          <div class="forum-avatar">
+           <img src="forum/DSC_6012-2.jpg" alt="Profile photo of forum user">
+          </div>
+
+          <div class="forum-user-meta">
+            <strong>Raahat</strong>
+            <span>5 hours ago</span>
+          </div>
+        </div>
+
+        <div class="forum-card-top">
+          <span class="forum-platform">TikTok</span>
+          <span class="forum-topic">Menstruation</span>
+        </div>
+      </div>
+
+      <h3>“I started censoring my own captions.”</h3>
+      <p class="forum-excerpt">
+        Being a woman with type 1 diabetes adds so many variable factors to my daily management when I'm menstruating. The patterns you spend so much time learning are all disrupted by hormonal changes, and on top of that we often have to fight harder in clinical settings to have our symptoms heard and diagnosed properly.
+      </p>
+
+      <div class="forum-actions">
+        <button class="action-btn like-btn">
+          <span class="icon">♡</span>
+          <span class="count">14</span>
+        </button>
+
+        <button class="action-btn comment-btn">
+          <span class="icon">💬</span>
+          <span>Comment</span>
+        </button>
+
+        <button class="action-btn expand-btn">
+          <span class="icon">↕</span>
+          <span>Expand</span>
+        </button>
+      </div>
+
+      <div class="comment-panel">
+        <div class="comment-list">
+          <p><strong>Mia:</strong> I do this too, especially with health-related posts.</p>
+        </div>
+
+        <div class="comment-form">
+          <input type="text" placeholder="Write a comment..." />
+          <button class="btn small-btn">Post</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="forum-card" data-platform="healthcare" data-topic="endometriosis">
+      <div class="forum-card-head">
+        <div class="forum-user">
+          <div class="forum-avatar">A</div>
+
+          <div class="forum-user-meta">
+            <strong>Anonymous user</strong>
+            <span>4 hours ago</span>
+          </div>
+        </div>
+
+        <div class="forum-card-top">
+          <span class="forum-platform">Healthcare</span>
+          <span class="forum-topic">Endometriosis</span>
+        </div>
+      </div>
+
+      <h3>“My pain was dismissed with a question that made me feel even worse.”</h3>
+      <p class="forum-excerpt">
+        When I was 16, I went to the doctor with my mum because I was experiencing severe period pain. While discussing my symptoms, the male doctor asked, “do you do it hard?”, referring to sex. The question made me feel deeply uncomfortable because he did not use appropriate terminology, and it felt unnecessary and insensitive in that moment.
+      </p>
+
+      <div class="forum-actions">
+        <button class="action-btn like-btn">
+          <span class="icon">♡</span>
+          <span class="count">11</span>
+        </button>
+
+        <button class="action-btn comment-btn">
+          <span class="icon">💬</span>
+          <span>Comment</span>
+        </button>
+
+        <button class="action-btn expand-btn">
+          <span class="icon">↕</span>
+          <span>Expand</span>
+        </button>
+      </div>
+
+      <div class="comment-panel">
+        <div class="comment-list">
+          <p><strong>Ella:</strong> Stories like this show how easily pain can be dismissed in clinical spaces.</p>
+        </div>
+
+        <div class="comment-form">
+          <input type="text" placeholder="Write a comment..." />
+          <button class="btn small-btn">Post</button>
+        </div>
+      </div>
+    </article>
+
+  </div>
+  </section>
+
+  <section class="forum-story-section forum-story-section-submissions" id="communitySubmissionsSection">
+    <div class="forum-section-heading">
+      <div>
+        <p class="forum-section-kicker">Community submissions</p>
+        <h3>Anonymous stories from the forum</h3>
+      </div>
+      <p class="forum-section-copy">
+      </p>
+    </div>
+
+    <div class="forum-grid forum-grid-submissions" id="forumSubmissionsGrid"></div>
+    <p class="forum-empty-state" id="forumEmptyState">
+      No community submissions yet. Be the first to share your experience.
+    </p>
+  </section>
+</section>
+<div class="story-modal-overlay" id="storyModal">
+  <div class="story-modal">
+    <button type="button" class="modal-close" id="closeStoryModal">×</button>
+
+    <p class="eyebrow">Share Your Story</p>
+    <h2>Your experience matters.</h2>
+    <p class="modal-intro">
+      Add your experience to the community forum. Your story helps make hidden patterns visible.
+    </p>
+
+    <form class="story-modal-form" id="storyPostForm">
+      <p class="story-form-note">
+        Your story will be shared anonymously. By submitting, you agree that your response may be stored and used for research purposes by the CensHERship team.
+      </p>
+      <input type="text" id="storyTitle" placeholder="Post title" required />
+      <input type="text" id="storyPlatform" placeholder="Platform (e.g. Instagram)" required />
+      <input type="text" id="storyTopic" placeholder="Topic (e.g. Menstruation)" required />
+      <textarea id="storyContent" placeholder="Share your experience..." required></textarea>
+
+      <label class="story-consent">
+        <input type="checkbox" id="storyConsent" required />
+        <span>I agree that my anonymous response can be stored and used for research purposes.</span>
+      </label>
+
+      <p class="story-status" id="storyStatus" aria-live="polite"></p>
+
+      <div class="modal-actions">
+        <button type="button" class="btn btn-outline" id="cancelStoryModal">Cancel</button>
+        <button type="submit" class="btn">Post story</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="forum-config.js"></script>
+<script>
+  const DEFAULT_FORUM_DB_CONFIG = {
+    enabled: false,
+    supabaseUrl: '',
+    supabaseAnonKey: ''
+  };
+
+  const FORUM_DB_CONFIG = Object.assign(
+    {},
+    DEFAULT_FORUM_DB_CONFIG,
+    window.FORUM_DB_CONFIG || {}
+  );
+
+  const openStoryModalBtn = document.getElementById('openStoryModal');
+  const storyModal = document.getElementById('storyModal');
+  const closeStoryModalBtn = document.getElementById('closeStoryModal');
+  const cancelStoryModalBtn = document.getElementById('cancelStoryModal');
+  const storyPostForm = document.getElementById('storyPostForm');
+  const forumSubmissionsGrid = document.getElementById('forumSubmissionsGrid');
+  const storyConsent = document.getElementById('storyConsent');
+  const storyStatus = document.getElementById('storyStatus');
+  const forumStoryCount = document.getElementById('forumStoryCount');
+  const forumEmptyState = document.getElementById('forumEmptyState');
+  const filterChips = document.querySelectorAll('.filter-chip');
+  const featuredStoriesSection = document.getElementById('featuredStoriesSection');
+  const communitySubmissionsSection = document.getElementById('communitySubmissionsSection');
+  const featuredStoriesGrid = document.querySelector('.forum-grid-featured');
+  const forumSort = document.querySelector('.forum-sort');
+
+  let activeFilter = 'all';
+
+  const databaseEnabled = Boolean(
+    FORUM_DB_CONFIG.enabled &&
+    FORUM_DB_CONFIG.supabaseUrl &&
+    FORUM_DB_CONFIG.supabaseAnonKey
+  );
+
+  function escapeHtml(value) {
+    return String(value).replace(/[&<>"']/g, (char) => {
+      const entities = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;'
+      };
+
+      return entities[char];
+    });
+  }
+
+  function formatRelativeTime(dateString) {
+    if (!dateString) return 'Just now';
+
+    const timestamp = new Date(dateString).getTime();
+
+    if (Number.isNaN(timestamp)) return 'Just now';
+
+    const diffMinutes = Math.max(1, Math.floor((Date.now() - timestamp) / 60000));
+
+    if (diffMinutes < 60) return `${diffMinutes} minute${diffMinutes === 1 ? '' : 's'} ago`;
+
+    const diffHours = Math.floor(diffMinutes / 60);
+    if (diffHours < 24) return `${diffHours} hour${diffHours === 1 ? '' : 's'} ago`;
+
+    const diffDays = Math.floor(diffHours / 24);
+    return `${diffDays} day${diffDays === 1 ? '' : 's'} ago`;
+  }
+
+  function setStoryStatus(message, tone = '') {
+    if (!storyStatus) return;
+
+    storyStatus.textContent = message;
+    storyStatus.className = `story-status${tone ? ` ${tone}` : ''}`;
+  }
+
+  function clearStoryStatus() {
+    setStoryStatus('');
+  }
+
+  function normalizeFilterValue(value) {
+    return String(value || '').trim().toLowerCase();
+  }
+
+  function cardMatchesFilter(card, filterValue) {
+    if (filterValue === 'all') return true;
+
+    const platform = normalizeFilterValue(card.dataset.platform);
+    const topic = normalizeFilterValue(card.dataset.topic);
+
+    return platform === filterValue || topic === filterValue;
+  }
+
+  function updateSectionVisibility() {
+    if (featuredStoriesSection && featuredStoriesGrid) {
+      const hasVisibleFeaturedCards = [...featuredStoriesGrid.querySelectorAll('.forum-card')]
+        .some((card) => !card.hidden);
+      featuredStoriesSection.hidden = !hasVisibleFeaturedCards;
+    }
+
+    if (communitySubmissionsSection && forumSubmissionsGrid) {
+      const hasVisibleSubmissionCards = [...forumSubmissionsGrid.querySelectorAll('.forum-card')]
+        .some((card) => !card.hidden);
+      communitySubmissionsSection.hidden = false;
+
+      if (forumEmptyState) {
+        if (activeFilter === 'all') {
+          forumEmptyState.textContent = 'No community submissions yet. Be the first to share your experience.';
+        } else {
+          forumEmptyState.textContent = 'No community submissions match this filter yet.';
+        }
+
+        forumEmptyState.hidden = hasVisibleSubmissionCards;
+      }
+    }
+  }
+
+  function applyActiveFilter() {
+    document.querySelectorAll('.forum-card').forEach((card) => {
+      card.hidden = !cardMatchesFilter(card, activeFilter);
+    });
+
+    updateSectionVisibility();
+  }
+
+  function updateStoryCount() {
+    const featuredCount = document.querySelectorAll('.forum-grid-featured .forum-card').length;
+    const submissionCount = forumSubmissionsGrid
+      ? forumSubmissionsGrid.querySelectorAll('.forum-card').length
+      : 0;
+
+    if (forumStoryCount) {
+      forumStoryCount.textContent = String(featuredCount + submissionCount);
+    }
+
+    updateSectionVisibility();
+  }
+
+  function getAvatarMarkup(avatarUrl, platform) {
+    if (avatarUrl) {
+      return `<img src="${escapeHtml(avatarUrl)}" alt="Profile photo of forum user">`;
+    }
+
+    const avatarLetter = platform ? platform[0].toUpperCase() : 'U';
+    return `<span class="forum-avatar-letter">${escapeHtml(avatarLetter)}</span>`;
+  }
+
+  function openStoryModal() {
+    storyModal.classList.add('open');
+    document.body.classList.add('modal-open');
+    clearStoryStatus();
+  }
+
+  function closeStoryModal() {
+    storyModal.classList.remove('open');
+    document.body.classList.remove('modal-open');
+  }
+
+  function createForumCard({
+    title,
+    platform,
+    topic,
+    content,
+    likes = 0,
+    createdAt,
+    avatarUrl = '',
+    authorLabel = 'Anonymous user'
+  }) {
+    const newCard = document.createElement('article');
+    newCard.className = 'forum-card';
+    newCard.dataset.platform = normalizeFilterValue(platform);
+    newCard.dataset.topic = normalizeFilterValue(topic);
+    newCard.dataset.createdAt = createdAt || '';
+    newCard.dataset.likes = String(likes);
+    newCard.dataset.comments = '0';
+
+    newCard.innerHTML = `
+      <div class="forum-card-head">
+        <div class="forum-user">
+          <div class="forum-avatar">${getAvatarMarkup(avatarUrl, platform)}</div>
+          <div class="forum-user-meta">
+            <strong>${escapeHtml(authorLabel)}</strong>
+            <span>${escapeHtml(formatRelativeTime(createdAt))}</span>
+          </div>
+        </div>
+
+        <div class="forum-card-top">
+          <span class="forum-platform">${escapeHtml(platform)}</span>
+          <span class="forum-topic">${escapeHtml(topic)}</span>
+        </div>
+      </div>
+
+      <h3>${escapeHtml(title)}</h3>
+      <p class="forum-excerpt">${escapeHtml(content)}</p>
+
+      <div class="forum-actions">
+        <button class="action-btn like-btn">
+          <span class="icon">♡</span>
+          <span class="count">${likes}</span>
+        </button>
+
+        <button class="action-btn comment-btn">
+          <span class="icon">💬</span>
+          <span>Comment</span>
+        </button>
+
+        <button class="action-btn expand-btn">
+          <span class="icon">↕</span>
+          <span>Expand</span>
+        </button>
+      </div>
+
+      <div class="comment-panel">
+        <div class="comment-list"></div>
+        <div class="comment-form">
+          <input type="text" placeholder="Write a comment..." />
+          <button type="button" class="btn small-btn comment-post-btn">Post</button>
+        </div>
+      </div>
+    `;
+
+    attachForumCardEvents(newCard);
+    newCard.hidden = !cardMatchesFilter(newCard, activeFilter);
+    return newCard;
+  }
+
+  async function fetchStoredStories() {
+    const response = await fetch(
+      `${FORUM_DB_CONFIG.supabaseUrl}/rest/v1/forum_posts?select=id,title,platform,topic,content,created_at&order=created_at.desc`,
+      {
+        headers: {
+          apikey: FORUM_DB_CONFIG.supabaseAnonKey,
+          Authorization: `Bearer ${FORUM_DB_CONFIG.supabaseAnonKey}`
+        }
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error('Could not load saved stories.');
+    }
+
+    return response.json();
+  }
+
+  async function insertStory(payload) {
+    const response = await fetch(`${FORUM_DB_CONFIG.supabaseUrl}/rest/v1/forum_posts`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Prefer: 'return=representation',
+        apikey: FORUM_DB_CONFIG.supabaseAnonKey,
+        Authorization: `Bearer ${FORUM_DB_CONFIG.supabaseAnonKey}`
+      },
+      body: JSON.stringify(payload)
+    });
+
+    if (!response.ok) {
+      throw new Error('Could not save your story.');
+    }
+
+    const [insertedStory] = await response.json();
+    return insertedStory;
+  }
+
+  async function loadDatabaseStories() {
+    if (!databaseEnabled || !forumSubmissionsGrid) {
+      updateStoryCount();
+      return;
+    }
+
+    try {
+      const stories = await fetchStoredStories();
+
+      stories.reverse().forEach((story) => {
+        const newCard = createForumCard({
+          title: story.title,
+          platform: story.platform,
+          topic: story.topic,
+          content: story.content,
+          createdAt: story.created_at
+        });
+
+        forumSubmissionsGrid.prepend(newCard);
+      });
+    } catch (error) {
+      console.error(error);
+      setStoryStatus('Database connection is set up, but saved stories could not be loaded.', 'error');
+    }
+
+    updateStoryCount();
+  }
+
+  function attachForumCardEvents(card) {
+    const likeBtn = card.querySelector('.like-btn');
+    const commentBtn = card.querySelector('.comment-btn');
+    const expandBtn = card.querySelector('.expand-btn');
+    const commentPanel = card.querySelector('.comment-panel');
+    const commentInput = card.querySelector('.comment-form input');
+    const commentPostBtn = card.querySelector('.comment-post-btn');
+    const commentList = card.querySelector('.comment-list');
+
+    if (likeBtn) {
+      likeBtn.addEventListener('click', () => {
+        const countEl = likeBtn.querySelector('.count');
+        let count = parseInt(countEl.textContent, 10);
+
+        if (!likeBtn.classList.contains('liked')) {
+          likeBtn.classList.add('liked');
+          count += 1;
+          countEl.textContent = count;
+        } else {
+          likeBtn.classList.remove('liked');
+          count -= 1;
+          countEl.textContent = count;
+        }
+
+        card.dataset.likes = String(count);
+      });
+    }
+
+    if (commentBtn && commentPanel) {
+      commentBtn.addEventListener('click', () => {
+        commentPanel.classList.toggle('open');
+      });
+    }
+
+    if (expandBtn) {
+      expandBtn.addEventListener('click', () => {
+        card.classList.toggle('expanded');
+        const label = expandBtn.querySelector('span:last-child');
+        label.textContent = card.classList.contains('expanded') ? 'Collapse' : 'Expand';
+      });
+    }
+
+    if (commentPostBtn && commentInput && commentList) {
+      commentPostBtn.addEventListener('click', () => {
+        const text = commentInput.value.trim();
+        if (!text) return;
+
+        const newComment = document.createElement('p');
+        newComment.innerHTML = `<strong>You:</strong> ${text}`;
+        commentList.appendChild(newComment);
+        commentInput.value = '';
+        card.dataset.comments = String(commentList.querySelectorAll('p').length);
+      });
+    }
+  }
+
+  if (openStoryModalBtn) {
+    openStoryModalBtn.addEventListener('click', openStoryModal);
+  }
+
+  if (closeStoryModalBtn) {
+    closeStoryModalBtn.addEventListener('click', closeStoryModal);
+  }
+
+  if (cancelStoryModalBtn) {
+    cancelStoryModalBtn.addEventListener('click', closeStoryModal);
+  }
+
+  if (storyModal) {
+    storyModal.addEventListener('click', (e) => {
+      if (e.target === storyModal) {
+        closeStoryModal();
+      }
+    });
+  }
+
+  if (storyPostForm && forumSubmissionsGrid) {
+    storyPostForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const title = document.getElementById('storyTitle').value.trim();
+      const platform = document.getElementById('storyPlatform').value.trim();
+      const topic = document.getElementById('storyTopic').value.trim();
+      const content = document.getElementById('storyContent').value.trim();
+      const consentGiven = storyConsent ? storyConsent.checked : false;
+
+      if (!title || !platform || !topic || !content || !consentGiven) return;
+
+      try {
+        setStoryStatus(
+          databaseEnabled ? 'Saving your anonymous story...' : 'Adding your story in demo mode...',
+          'loading'
+        );
+
+        let storyData = {
+          title,
+          platform,
+          topic,
+          content,
+          createdAt: new Date().toISOString()
+        };
+
+        if (databaseEnabled) {
+          const insertedStory = await insertStory({
+            title,
+            platform,
+            topic,
+            content,
+            consent_to_store: true
+          });
+
+          storyData = {
+            title: insertedStory.title,
+            platform: insertedStory.platform,
+            topic: insertedStory.topic,
+            content: insertedStory.content,
+            createdAt: insertedStory.created_at
+          };
+        }
+
+        const newCard = createForumCard({
+          ...storyData,
+          likes: 0
+        });
+
+        forumSubmissionsGrid.prepend(newCard);
+        updateStoryCount();
+        storyPostForm.reset();
+        setStoryStatus(
+          databaseEnabled
+            ? 'Your story has been saved anonymously.'
+            : 'Your story was added to the page. Connect Supabase to store it permanently.',
+          'success'
+        );
+
+        window.setTimeout(() => {
+          closeStoryModal();
+          clearStoryStatus();
+        }, 700);
+      } catch (error) {
+        console.error(error);
+        setStoryStatus(error.message || 'Something went wrong while saving your story.', 'error');
+      }
+    });
+  }
+
+  filterChips.forEach((chip) => {
+    chip.addEventListener('click', () => {
+      activeFilter = chip.dataset.filter || 'all';
+
+      filterChips.forEach((item) => item.classList.remove('active'));
+      chip.classList.add('active');
+      applyActiveFilter();
+    });
+  });
+
+  if (forumSort) {
+    forumSort.addEventListener('change', () => {
+      if (!forumSubmissionsGrid) return;
+
+      const cards = [...forumSubmissionsGrid.querySelectorAll('.forum-card')];
+      const sortValue = forumSort.value;
+
+      cards.sort((a, b) => {
+        if (sortValue === 'liked') {
+          return Number(b.dataset.likes || 0) - Number(a.dataset.likes || 0);
+        }
+
+        if (sortValue === 'discussed') {
+          return Number(b.dataset.comments || 0) - Number(a.dataset.comments || 0);
+        }
+
+        const aTime = new Date(a.dataset.createdAt || 0).getTime();
+        const bTime = new Date(b.dataset.createdAt || 0).getTime();
+        return bTime - aTime;
+      });
+
+      cards.forEach((card) => forumSubmissionsGrid.appendChild(card));
+    });
+  }
+
+  document.querySelectorAll('.forum-card').forEach(attachForumCardEvents);
+  loadDatabaseStories();
+  updateStoryCount();
+  applyActiveFilter();
+</script>
+<script>
+  const surveyModal = document.getElementById("surveyModal");
+  const closeSurveyModal = document.getElementById("closeSurveyModal");
+
+  closeSurveyModal.addEventListener("click", function () {
+    surveyModal.classList.add("hidden");
+  });
+</script>
+    </main>
+  </div>
+</body>
+</html>

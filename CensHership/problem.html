@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Problem | CensHERship</title>
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <!-- css -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="site-shell">
+
+    <!-- HEADER -->
+    <header class="site-header">
+      <a href="index.html" class="logo">
+      <img src="censhership logo.png" alt="Censhership logo">
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="problem.html" class="active">Problem</a>
+        <a href="survey.html">Survey</a>
+        <a href="forum.html">Forum</a>
+        <a href="about.html">About us</a>
+      </nav>
+
+      <a href="forum.html" class="btn-primary">Take Action</a>
+    </header>
+
+    <main>
+
+      <!-- PROBLEM SECTION -->
+      <section class="problem section-card">
+        <div class="problem-grid">
+
+          <div class="problem-visual">
+           <button type="button" class="problem-video-toggle" id="problemVideoToggle" aria-label="Play video with sound">
+            <span class="problem-video-toggle-icon">▶</span>
+            <span class="problem-video-toggle-text">Click to play with sound</span>
+           </button>
+           <video class="problem-video" id="problemVideo" loop playsinline preload="metadata">
+           <source src="Censorship Campaign Video.mp4" type="video/mp4">
+           Your browser does not support the video tag.
+           </video>
+          </div>
+
+
+          <!-- RIGHT TEXT -->
+          <div class="problem-copy">
+            <p class="eyebrow">The Problem</p>
+
+            <h2>
+              The platforms call it moderation.
+              Many users experience it as silence.
+            </h2>
+
+            <p>
+              Posts about periods, miscarriage, abortion, menopause, breastfeeding, and other women’s health topics are often hidden, blurred, rejected, or pushed out of view.
+            </p>
+
+            <p>
+              Censorship does not always look like removal. It can appear as reduced reach, softened language, or the quiet pressure to say less.
+            </p>
+
+            <p class="handwritten problem-note">
+              Make the invisible visible.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- PATTERNS SECTION -->
+      <section class="patterns section-card">
+
+        <div class="section-heading">
+          <p class="eyebrow">Evidence & Patterns</p>
+          <h2>How silence is produced</h2>
+
+          <p class="section-intro">
+            Censorship is not always visible as deletion. It often appears through
+            altered language, reduced reach, and the expectation of restriction.
+          </p>
+        </div>
+
+        <div class="patterns-grid">
+
+          <article class="pattern-card">
+            <div class="pattern-icon">✱</div>
+            <h3>Words are replaced</h3>
+            <p>
+              People end up changing their language, using coded spellings, emojis, or abbreviations instead of saying things directly.
+            </p>
+          </article>
+
+          <article class="pattern-card">
+            <div class="pattern-icon">◌</div>
+            <h3>Visibility is reduced</h3>
+            <p>
+              Not all censorship is obvious. Posts may remain online but become harder to search, share, or discover.
+            </p>
+          </article>
+
+          <article class="pattern-card">
+            <div class="pattern-icon">—</div>
+            <h3>Silence becomes habitual</h3>
+            <p>
+              Over time, people start censoring themselves before posting, expecting restriction before it even happens.
+            </p>
+          </article>
+
+        </div>
+
+        <p class="pattern-transition">
+          → These patterns are reflected in our survey data.
+        </p>
+
+      </section>
+
+    </main>
+  </div>
+  <script>
+  const problemVideo = document.getElementById("problemVideo");
+  const problemVideoToggle = document.getElementById("problemVideoToggle");
+
+  if (problemVideo && problemVideoToggle) {
+    function hideProblemVideoOverlay() {
+      problemVideoToggle.classList.add("is-hidden");
+    }
+
+    async function playProblemVideoWithSound() {
+      problemVideo.muted = false;
+
+      try {
+        await problemVideo.play();
+        hideProblemVideoOverlay();
+      } catch (error) {
+        problemVideo.muted = true;
+        await problemVideo.play();
+        problemVideoToggle.querySelector(".problem-video-toggle-text").textContent = "Tap again to unmute";
+      }
+    }
+
+    problemVideoToggle.addEventListener("click", playProblemVideoWithSound);
+
+    problemVideo.addEventListener("click", () => {
+      if (problemVideo.paused) {
+        playProblemVideoWithSound();
+        return;
+      }
+
+      problemVideo.muted = !problemVideo.muted;
+      problemVideoToggle.classList.toggle("is-hidden", !problemVideo.muted);
+      problemVideoToggle.querySelector(".problem-video-toggle-text").textContent = problemVideo.muted
+        ? "Click to unmute"
+        : "Sound on";
+    });
+
+    problemVideo.addEventListener("volumechange", () => {
+      problemVideoToggle.classList.toggle("is-hidden", !problemVideo.muted);
+    });
+  }
+  </script>
+</body>
+</html>

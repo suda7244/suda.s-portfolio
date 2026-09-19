@@ -1,0 +1,51 @@
+body {
+    font-family: Verdana, sans-serif;
+    background-color: whitesmoke;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: Georgia, serif;
+    color: #4E0102;
+}
+h1 {
+    text-align: center;
+}
+h2 {
+    border-top: solid 2px #4E0102;
+    padding-top: 1em;
+}
+em {
+    font-weight: bold;
+    font-size: 120%;
+}
+blockquote {
+    background: #F0ECEC;
+    margin:1em;
+    font-style: italic;
+}
+.firstLetter {
+    font-size: 300%;
+    font-family: Georgia, serif;
+    color: #4E0102;
+}
+.firstWord{
+    text-transform: uppercase;
+}
+#firstStory {
+    color: #17037A;
+}
+#navigation {
+        font-family: Georgia, serif; font-size: 100%;
+        border-top: solid 2px #4E0102;
+        border-bottom: solid 2px #4E0102;
+}
+li {
+            display: inline;
+            list-style-type: none;
+            font-weight: bold;
+}
+a:link, a:visited, a:active {
+    color:#17037A; text-decoration: none; font-weight: bold;
+}
+a:hover {
+    color:darkred; text-decoration: underline; font-weight: bold;
+}   

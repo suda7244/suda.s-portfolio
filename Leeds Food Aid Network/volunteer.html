@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Volunteer Sign-Up | Leeds Food Aid Network</title>
+  <link rel="stylesheet" href="styles-green5.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" class="logo">Leeds FAN</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="get-help.html">Get Help</a></li>
+        <li class="dropdown">
+          <a href="get-involved.html" class="active">Get Involved ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="volunteer.html">Volunteer Sign-Up</a></li>
+            <li><a href="partner.html">Corporate Partnerships</a></li>
+          </ul>
+        </li>
+        <li><a href="news-resources.html">News & Resources</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h1>Volunteer Sign-Up</h1>
+      <p>Please fill out the form below to join our volunteer team.</p>
+      <form action="#" method="POST" class="volunteer-form">
+        <div class="form-grid">
+          <div>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required />
+      
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required />
+      
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" />
+      
+            <label for="availability">Availability:</label>
+            <select id="availability" name="availability">
+              <option value="" disabled selected>Select availability</option>
+              <option value="weekdays">Weekdays</option>
+              <option value="weekends">Weekends</option>
+              <option value="both">Both</option>
+            </select>
+      
+            <label for="location">Preferred Volunteering Location:</label>
+            <input type="text" id="location" name="location" />
+          </div>
+      
+          <div>
+            <label for="experience">Do you have any relevant experience?</label>
+            <textarea id="experience" name="experience" rows="4" placeholder="E.g. food bank work, community service..."></textarea>
+      
+            <label for="skills">What skills can you bring to our team?</label>
+            <textarea id="skills" name="skills" rows="3" placeholder="Languages, driving, admin, etc."></textarea>
+      
+            <label for="message">Why do you want to volunteer with us?</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+        </div>
+      
+        <button type="submit" class="submit-button">Submit Application</button>
+      </form>
+      
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Leeds Food Aid Network. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#">Accessibility</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Contact</a>
+    </div>
+  </footer>
+</body>
+</html>

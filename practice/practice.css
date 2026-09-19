@@ -1,0 +1,55 @@
+#container {
+    background-color:whitesmoke; margin: auto;
+    width: 400px;
+    height: 395px;
+}
+.red {
+    background: red;
+    width: 280px;
+    height: 280px;
+    position: relative;
+    border: 8px solid black;
+}
+.white1 {
+    background: white;
+    width: 105px;
+    height: 120px;
+    position: relative;
+    border-bottom: 8px solid black;
+}
+.white2 {
+    background: white;
+    width: 105px;
+    height: 156px;
+    position: relative;
+    border-bottom: 8px solid black;
+    border-top: 8px solid black;
+}
+.blue{
+    background: darkblue;
+    width:105px;
+    height:100px;
+    border-right: 8px solid black;
+    position: relative;
+}
+.white3 {
+    background: white;
+    width: 235px;
+    height: 100px;
+    position: relative;
+    border-right: 8px solid black;
+}
+.white4{
+    background: white;
+    width: 42px;
+    height: 42px;
+    position: relative;
+    border-bottom: 8px solid black;
+}
+.yellow{
+    background: yellow;
+    width: 42px;
+    height:42px;
+    position:relative;
+    border-top: 8px solid black;
+}

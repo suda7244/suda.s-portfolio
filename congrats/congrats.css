@@ -1,0 +1,96 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+    colour: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: centre;
+  }
+  
+  /* Header */
+  header {
+    text-align: centre;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c);
+    colour: white;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+  }
+  
+  /* Grid Container */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+  }
+  
+  /* Grid Items */
+  .grid-item {
+    display: flex;
+    align-items: centre;
+    justify-content: centre;
+    padding: 2rem;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    colour: white;
+    text-align: centre;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .item-1 {
+    background: #ff6f61;
+  }
+  
+  .item-2 {
+    background: #6bc9db;
+  }
+  
+  .item-3 {
+    background: #ffcc5c;
+  }
+  
+  .item-4 {
+    background: #88d498;
+  }
+  
+  .item-5 {
+    background: #845ec2;
+  }
+  
+  .item-6 {
+    background: #d65db1;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: centre;
+    padding: 1rem;
+    background: #333;
+    color: white;
+    font-size: 0.9rem;
+  }
+
+  .bigimage{
+    width:100%;
+  }
+  .littleimage{
+    width:20%;
+    height:20%;
+  }

@@ -1,0 +1,74 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.site-header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 24px;
+  background: rgba(255, 246, 248, 0.92);
+  border: 1px solid rgba(230, 57, 70, 0.08);
+  border-radius: 999px;
+  padding: 16px 24px;
+  position: sticky;
+  top: 18px;
+  z-index: 50;
+}
+
+.logo {
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Anton", sans-serif;
+  font-size: 2.4rem;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #bb8088;
+  white-space: nowrap;
+}
+
+.logo span {
+  color: #650000;
+}
+
+.main-nav {
+  justify-self: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(138, 46, 46, 0.08);
+  border-radius: 999px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #2f2a26;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+}
+
+.main-nav a:hover {
+  background: rgba(184, 50, 80, 0.08);
+  color: #8a2e2e;
+}
+
+.btn-primary {
+  justify-self: end;
+  background: #8f1628;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.logo img {
+  height: 100px;   /* 推荐先用这个 */
+  width: auto;
+  display: block;
+}

@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+/* set up the fonts */
+body{
+	font-family:Verdana, sans-serif;
+}
+h2,h3{
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: bold;
+}
+h1,h4{
+	font-family: Georgia,serif;
+	font-weight: bolder;
+}
+
+/*style a few links */
+.box a{
+	color:#212020;
+	text-decoration:none;
+}
+.box a:hover{
+	text-decoration:underline;
+}
+
+/* position the content */
+.wrapper {
+	margin: 0 auto;
+	width: 960px;
+	padding: 0 10px;
+	}
+/* style the header and footer */
+#footer, #header{
+	float:left;
+	clear:both;
+	padding: 10px;
+	text-align:center;
+	width:100%;
+}
+
+/* create the floating boxes */
+.box {
+   float: left;
+   margin: 5px;
+   padding: 10px;
+   width: 285px;
+   height: 480px;
+   border: 1px solid grey;
+} 
+/* style the box content */ 
+.box img{
+	width: 280px; /* alternatively set the image width in your HTML */
+}
+.box h3, .box p{
+	text-align:center;
+}
+#content {
+	float: left;
+	width: 100%;
+	background-color: lightpink;
+}
+.box {
+	float: left;
+	margin: 6px; /* tweak this to fit screen */
+	padding: 10px;
+	width: 285px;
+	height: 480px;
+	border: 1px solid black;
+	background-color: whitesmoke; /* this is new! */
+	}

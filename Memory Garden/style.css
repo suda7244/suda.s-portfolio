@@ -1,0 +1,204 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background: #fdf6f0;
+    font-family: "Caveat Brush", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  canvas {
+    display: block;
+  }
+
+  .ui-panel {
+    position: fixed;
+    top: 24px;
+    left: 28px;
+    padding: 16px 18px 14px;
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 230, 220, 0.9);
+    z-index: 20;
+    max-width: 320px;
+  }
+
+  .ui-title {
+    font-size: 24px;
+    letter-spacing: 0.04em;
+    margin-bottom: 6px;
+    color: #444;
+  }
+
+  .ui-row {
+    margin-top: 6px;
+  }
+
+  .ui-input {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 12px;
+    border: 1px solid rgba(240, 200, 190, 0.9);
+    background: rgba(255, 250, 246, 0.9);
+    font-size: 16px;
+    outline: none;
+    box-sizing: border-box;
+  }
+
+  .ui-input::placeholder {
+    color: #c8a9a0;
+  }
+
+  .ui-row-buttons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .ui-btn {
+    border-radius: 999px;
+    border: none;
+    padding: 6px 14px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: "Caveat Brush", inherit;
+    transition: transform 0.08s ease, box-shadow 0.08s ease, background 0.1s ease;
+    white-space: nowrap;
+  }
+
+  .ui-btn-main {
+    background: linear-gradient(135deg, #ffb8c6, #ffcba4);
+    color: #503134;
+    box-shadow: 0 4px 10px rgba(255, 155, 155, 0.35);
+  }
+
+  .ui-btn-main:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 12px rgba(255, 155, 155, 0.5);
+  }
+
+  .ui-btn-ghost {
+    background: rgba(255, 255, 255, 0.9);
+    color: #7a5b4b;
+    border: 1px dashed rgba(230, 190, 180, 0.9);
+  }
+
+  .ui-btn-ghost:hover {
+    background: rgba(255, 245, 238, 0.95);
+    transform: translateY(-1px);
+  }
+
+  .ui-hint {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #a07d6c;
+    opacity: 0.9;
+  }
+
+  /* 可选：小屏幕时把面板缩一点 */
+  @media (max-width: 768px) {
+    .ui-panel {
+      max-width: 260px;
+      left: 12px;
+      top: 12px;
+      padding: 12px 14px;
+    }
+    .ui-title { font-size: 20px; }
+    .ui-input { font-size: 14px; }
+    .ui-btn { font-size: 14px; padding: 5px 10px; }
+    .ui-hint { font-size: 12px; }
+  }
+  /* ❓ 问号按钮 */
+.info-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  text-align: center;
+  line-height: 34px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 100;
+  font-family: "Caveat Brush", cursive;
+  color: #6a5050;
+  transition: transform 0.1s ease;
+}
+
+.info-btn:hover {
+  transform: scale(1.1);
+}
+
+/* 🌸 弹出的说明卡片 */
+.info-popup {
+  position: fixed;
+  bottom: 70px;
+  right: 24px;
+  width: 260px;
+  padding: 16px 18px;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 18px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.18);
+  z-index: 90;
+  display: none;
+  font-family: "Caveat Brush", cursive;
+}
+
+.info-title {
+  font-size: 22px;
+  margin-bottom: 6px;
+  color: #5a4444;
+}
+
+.info-text {
+  font-size: 16px;
+  color: #7f6a6a;
+  line-height: 1.4;
+}
+、.diary-header {
+  margin-top: 10px;
+  margin-bottom: 4px;
+  font-size: 14px;
+  color: #8b6a5b;
+  letter-spacing: 0.03em;
+}
+
+.diary-list {
+  max-height: 240px;          /* 超出就滚动 */
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+/* 一条日记卡片 */
+.diary-entry {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 6px 9px;
+  margin-bottom: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  cursor: default;
+}
+
+.diary-entry:hover {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.diary-date {
+  font-size: 11px;
+  color: #b09586;
+  margin-bottom: 2px;
+}
+
+.diary-text {
+  font-size: 13px;
+  color: #5a4444;
+  line-height: 1.3;
+}
+
+.diary-empty {
+  font-size: 12px;
+  color: #b09586;
+  opacity: 0.8;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Memory Garden</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 直接用 CDN 的 p5.js，避免本地文件出错 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="margin:0; overflow:hidden; font-family:sans-serif;">
+
+  <div class="ui-panel">
+  <div class="ui-title"></div>
+
+  <div class="ui-row">
+    <input id="memoryInput"
+           type="text"
+           placeholder="Write a memory for today..."
+           class="ui-input" />
+  </div>
+
+  <div class="ui-row ui-row-buttons">
+    <button id="addBtn" class="ui-btn ui-btn-main">+ Add memory</button>
+
+    <!-- 自定义的“添加照片”按钮 -->
+    <label for="photoInput" class="ui-btn ui-btn-ghost">
+      📸 Add photo
+    </label>
+    <input id="photoInput"
+           type="file"
+           accept="image/*"
+           style="display:none;" />
+  </div>
+
+  <div class="ui-hint">
+    Tip: hover a flower to read your memory.
+  <div class="diary-header">Diary</div>
+   <div id="diaryList" class="diary-list">
+  </div>
+</div>
+  <script src="sketch.js"></script>
+  <!-- ❓ 右下角问号按钮 -->
+<div class="info-btn">?</div>
+
+<!-- 🌸 弹出说明卡片 -->
+<div class="info-popup" id="infoPopup">
+  <div class="info-title">About Memory Garden</div>
+  <div class="info-text">
+    Flower shapes and colors reflect the emotion in your writing:
+    <br><br>
+    • Warm colors → positive feelings<br>
+    • Cool colors → calm or sad memories<br>
+    • Sharper petals → stronger emotions<br>
+    • Higher flowers → happier memories<br><br>
+    Every memory grows into a unique flower.
+  </div>
+</div>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const infoBtn = document.querySelector('.info-btn');
+    const popup = document.getElementById('infoPopup');
+
+    if (!infoBtn || !popup) return;  // 防止出错
+
+    infoBtn.addEventListener('click', () => {
+      if (popup.style.display === 'block') {
+        popup.style.display = 'none';
+      } else {
+        popup.style.display = 'block';
+      }
+    });
+  });
+</script>
+</body>
+</html>

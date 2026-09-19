@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CensHERship</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="site-header">
+  <a href="index.html" class="logo">
+  <img src="censhership logo.png" alt="Censhership logo">
+  </a>
+  <nav class="main-nav">
+    <a href="index.html">Home</a>
+    <a href="problem.html">Problem</a>
+    <a href="survey.html">Survey</a>
+    <a href="forum.html">Forum</a>
+    <a href="about.html">About us</a>
+  </nav>
+
+  <a href="forum.html" class="btn-primary">Take Action</a>
+</header>
+    <main>
+      <!-- HERO -->
+      <section class="hero section-card">
+        <div class="hero-text">
+
+          <h1>
+            The algorithmic bias is <span class="circled">censoring</span> women's health online.
+          </h1>
+
+          <p class="hero-copy">
+            CensHERship brings together stories, research, and visual evidence to show how women's health content is hidden, flagged, softened, or pushed aside across digital platforms.
+          </p>
+
+        <div class="keyword-grid animated-keywords">
+        <span class="keyword-tag blur-on">period</span>
+        <span class="keyword-tag block-on">abortion</span>
+        <span class="keyword-tag strike-on">miscarriage</span>
+        <span class="keyword-tag flag-on">menopause</span>
+        <span class="keyword-tag blur-on">breastfeeding</span>
+        <span class="keyword-tag block-on">vagina</span>
+        </div>
+
+          <div class="hero-actions">
+            <a href="problem.html" class="btn btn-outline">See the Evidence</a>
+            <a href="forum.html" class="btn">Share Your Story</a>
+          </div>
+
+          <p class="handwritten"> What gets censored still exists.</p>
+        </div>
+
+      <div class="hero-collage">
+       <div class="hero-collage single-photo">
+       <img src="home-page-main-photo.jpg" alt="Main homepage image" class="homepage-main-photo">
+      </div>
+     
+     
+    </section>
+
+    <section class="section-card video-section">
+      <div class="video-inner">
+  <div class="section-heading">
+    <p class="eyebrow">Project Video</p>
+    <h2>Watch how CensHERship makes hidden experiences visible.</h2>
+  </div>
+
+  <div class="video-wrapper">
+    <button type="button" class="video-sound-toggle" id="videoSoundToggle" aria-label="Play video with sound">
+      <span class="video-sound-toggle-icon">▶</span>
+      <span class="video-sound-toggle-text">Click to play with sound</span>
+    </button>
+    <video id="projectVideo" loop playsinline preload="metadata">
+      <source src="CTA.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  </section>
+
+    <section class="section-card home-overview">
+  <div class="section-heading">
+    <p class="eyebrow">Project Overview</p>
+    <h2>A website built to make hidden patterns visible.</h2>
+    <p class="section-intro">
+      The website moves between context, evidence, lived experience, and action, helping users understand not only what censorship looks like, but how it feels and why it matters.
+    </p>
+  </div>
+
+  <div class="home-preview-grid">
+    <a href="problem.html" class="home-preview-card">
+      <h3>Problem</h3>
+      <p>See how moderation can become invisibility.</p>
+      <span>→ Learn more</span>
+    </a>
+
+    <a href="survey.html" class="home-preview-card">
+      <h3>Survey</h3>
+      <p>Explore what our participants revealed about visibility, language, and restriction.</p>
+      <span>→ View findings</span>
+    </a>
+
+    <a href="forum.html" class="home-preview-card">
+      <h3>Forum</h3>
+      <p>Read real experiences and share your own anonymously.</p>
+      <span>→ Enter forum</span>
+    </a>
+
+    <a href="action.html" class="home-preview-card">
+      <h3>Action</h3>
+      <p>Find ways to respond, support, and make the issue visible.</p>
+      <span>→ Take action</span>
+    </a>
+  </div>
+</section>
+
+      <!-- WORDS -->
+      <section class="words section-card words-animate">
+      <div class="section-heading">
+       <p class="eyebrow">The Words They Hide</p>
+       <h2>Keywords become evidence when they keep disappearing.</h2>
+      </div>
+
+      <div class="censorship-grid">
+       <div class="censor-card blocked-card">
+       <span class="hidden-word">libido</span>
+       <span class="block-bar"></span>
+      </div>
+
+      <div class="censor-card blurred-card">
+       menstruation
+      </div>
+
+      <div class="censor-card struck-card">
+       orgasm
+      </div>
+
+      <div class="censor-card blocked-card">
+       <span class="hidden-word">uterus</span>
+       <span class="block-bar short"></span>
+      </div>
+
+      <div class="censor-card blurred-card">
+       tampon
+      </div>
+
+      <div class="censor-card struck-card">
+       sexual wellbeing
+      </div>
+    </div>
+    </section>
+
+  
+  <section class="about-preview">
+  <h2>About the Project</h2>
+  <p>
+    Meet the team behind CensHERship and explore how the project was developed.
+  </p>
+  <a href="about.html">Learn more →</a>
+  </section>
+    </main>
+  </div>
+  <script>
+  const animatedTags = document.querySelectorAll('.keyword-tag');
+
+  function resetEffects(tag) {
+    tag.classList.remove('is-blurred', 'is-blocked', 'is-struck', 'is-flagged');
+  }
+
+  function applyEffect(tag) {
+    resetEffects(tag);
+
+    if (tag.classList.contains('blur-on')) {
+      tag.classList.add('is-blurred');
+    } else if (tag.classList.contains('block-on')) {
+      tag.classList.add('is-blocked');
+    } else if (tag.classList.contains('strike-on')) {
+      tag.classList.add('is-struck');
+    } else if (tag.classList.contains('flag-on')) {
+      tag.classList.add('is-flagged');
+    }
+
+    setTimeout(() => {
+      resetEffects(tag);
+    }, 1200);
+  }
+
+  function animateKeywords() {
+    const randomTag = animatedTags[Math.floor(Math.random() * animatedTags.length)];
+    applyEffect(randomTag);
+  }
+
+  setInterval(animateKeywords, 1600);
+</script>
+<script>
+
+const word = document.querySelector(".circled");
+
+function censorEffect(){
+
+word.classList.add("is-blocked");
+
+setTimeout(()=>{
+word.classList.remove("is-blocked");
+},800);
+
+}
+
+setInterval(censorEffect,5000);
+</script>
+<script>
+const wordsSection = document.querySelector(".words-animate");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      wordsSection.classList.add("active");
+    }
+  });
+}, {
+  threshold: 0.15
+});
+
+observer.observe(wordsSection);
+</script>
+<script>
+const projectVideo = document.getElementById("projectVideo");
+const videoSoundToggle = document.getElementById("videoSoundToggle");
+
+if (projectVideo && videoSoundToggle) {
+  function hideVideoOverlay() {
+    videoSoundToggle.classList.add("is-hidden");
+  }
+
+  async function playVideoWithSound() {
+    projectVideo.muted = false;
+
+    try {
+      await projectVideo.play();
+      hideVideoOverlay();
+    } catch (error) {
+      projectVideo.muted = true;
+      await projectVideo.play();
+      videoSoundToggle.querySelector(".video-sound-toggle-text").textContent = "Tap again to unmute";
+    }
+  }
+
+  videoSoundToggle.addEventListener("click", playVideoWithSound);
+
+  projectVideo.addEventListener("click", () => {
+    if (projectVideo.paused) {
+      playVideoWithSound();
+      return;
+    }
+
+    projectVideo.muted = !projectVideo.muted;
+    videoSoundToggle.classList.toggle("is-hidden", !projectVideo.muted);
+    videoSoundToggle.querySelector(".video-sound-toggle-text").textContent = projectVideo.muted
+      ? "Click to unmute"
+      : "Sound on";
+  });
+
+  projectVideo.addEventListener("volumechange", () => {
+    videoSoundToggle.classList.toggle("is-hidden", !projectVideo.muted);
+  });
+}
+</script>
+</body>
+</html>

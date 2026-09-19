@@ -1,0 +1,21 @@
+.square, .circle {
+    width: 150px;
+    height: 150px;
+    
+    }
+    .circle {
+    border-radius: 50%;
+    }
+        #container {
+            background-color:greenyellow; margin: auto;
+            width: 600px;
+            height: 700px;
+            }
+            #blockPink {
+                background-color: pink;
+                position: relative;
+                }
+                #blockYellow {
+                background-color: yellow;
+                position: relative;
+                }
