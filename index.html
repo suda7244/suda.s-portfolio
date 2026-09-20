@@ -80,17 +80,17 @@
                <div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: center;">
                 <!-- Video 1 -->
                 <div style="flex: 1 1 270px; text-align: center;">
-                 <video controls preload="none" poster="images/video-poster.jpg" width="270" height="480"
+                 <video class="lazy-video" controls preload="none" poster="images/video-poster.jpg" width="270" height="480"
                   style="border-radius: 8px; object-fit: cover;">
-                  <source src="videos/IMG_9279.mov" type="video/mp4" />
+                  <source data-src="videos/IMG_9279.mov" type="video/mp4" />
                  </video>
                 </div>
   
                <!-- Video 2 -->
                <div style="flex: 1 1 270px; text-align: center;">
-                <video controls preload="none" poster="images/video-poster-2.jpg" width="270" height="480"
+                <video class="lazy-video" controls preload="none" poster="images/video-poster-2.jpg" width="270" height="480"
                 style="border-radius: 8px; object-fit: cover;">
-                <source src="videos/IMG_9868.mov" type="video/mp4" />
+                <source data-src="videos/IMG_9868.mov" type="video/mp4" />
                 </video>
                </div>
               </div>
@@ -282,6 +282,22 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				document.querySelectorAll('.lazy-video').forEach(function(video) {
+					var loadVideo = function() {
+						video.querySelectorAll('source[data-src]').forEach(function(source) {
+							source.src = source.dataset.src;
+							source.removeAttribute('data-src');
+						});
+						video.load();
+						video.removeEventListener('pointerdown', loadVideo);
+						video.removeEventListener('play', loadVideo);
+					};
+
+					video.addEventListener('pointerdown', loadVideo, { once: true });
+					video.addEventListener('play', loadVideo, { once: true });
+				});
+			</script>
 
 	</body>
 </html>
